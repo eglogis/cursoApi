@@ -2,7 +2,7 @@
 
 include_once 'departamento.php';
 class ApiDepartamentos{
-    
+
     function getAll(){
         $departamento = new Departamento();
         $departamentos = array();
@@ -20,6 +20,7 @@ class ApiDepartamentos{
             }
         
             echo json_encode($departamentos);
+            
         }else{
             echo json_encode(array('mensaje' => 'No hay elementos'));
         }
